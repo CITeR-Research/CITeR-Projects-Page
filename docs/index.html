@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CITeR Projects Documentation">
+    <title>Documentation - CITeR Projects</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="docs-style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CITeR Projects Documentation</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Documentation</a></li>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#api">API</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="docs-layout">
+                <aside class="sidebar">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#project-structure">Project Structure</a></li>
+                        <li><a href="#deployment">Deployment</a></li>
+                        <li><a href="#api">API Reference</a></li>
+                        <li><a href="#contributing">Contributing</a></li>
+                    </ul>
+                </aside>
+
+                <div class="docs-content">
+                    <section id="introduction">
+                        <h2>Introduction</h2>
+                        <p>Welcome to the CITeR Projects Page documentation. This static website showcases research projects from the Center for Identification Technology Research.</p>
+                        <p>This documentation will guide you through understanding the project structure, deploying the site, and contributing to the project.</p>
+                    </section>
+
+                    <section id="getting-started">
+                        <h2>Getting Started</h2>
+                        <p>To get started with this project, follow these steps:</p>
+                        <ol>
+                            <li>Clone the repository: <code>git clone https://github.com/CITeR-Research/CITeR-Projects-Page.git</code></li>
+                            <li>Open <code>index.html</code> in your web browser</li>
+                            <li>Explore the projects and documentation</li>
+                        </ol>
+                        
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li>A modern web browser (Chrome, Firefox, Safari, Edge)</li>
+                            <li>A local web server (optional, for testing)</li>
+                        </ul>
+                    </section>
+
+                    <section id="project-structure">
+                        <h2>Project Structure</h2>
+                        <p>The project is organized as follows:</p>
+                        <pre><code>CITeR-Projects-Page/
+├── index.html          # Main homepage
+├── styles.css          # Main stylesheet
+├── script.js           # JavaScript functionality
+├── docs/               # Documentation folder
+│   ├── index.html      # Documentation homepage
+│   └── docs-style.css  # Documentation-specific styles
+└── README.md           # Project readme</code></pre>
+                    </section>
+
+                    <section id="deployment">
+                        <h2>Deployment</h2>
+                        <p>This static website can be deployed to various platforms:</p>
+                        
+                        <h3>GitHub Pages</h3>
+                        <ol>
+                            <li>Go to your repository settings</li>
+                            <li>Navigate to "Pages" in the sidebar</li>
+                            <li>Select the branch you want to deploy (e.g., main)</li>
+                            <li>Choose the root folder as the source</li>
+                            <li>Click "Save" and your site will be deployed</li>
+                        </ol>
+
+                        <h3>Netlify</h3>
+                        <ol>
+                            <li>Connect your GitHub repository to Netlify</li>
+                            <li>Set the build command to empty (no build required)</li>
+                            <li>Set the publish directory to the root folder</li>
+                            <li>Deploy!</li>
+                        </ol>
+
+                        <h3>Vercel</h3>
+                        <ol>
+                            <li>Import your GitHub repository to Vercel</li>
+                            <li>No build configuration needed</li>
+                            <li>Deploy automatically</li>
+                        </ol>
+                    </section>
+
+                    <section id="api">
+                        <h2>API Reference</h2>
+                        <p>This static website doesn't require an API, but you can extend it with external APIs if needed.</p>
+                        
+                        <h3>JavaScript Functions</h3>
+                        <p>The <code>script.js</code> file includes the following functionality:</p>
+                        <ul>
+                            <li><strong>Smooth Scrolling:</strong> Automatically applied to all anchor links</li>
+                            <li><strong>Active Navigation:</strong> Updates nav links based on scroll position</li>
+                            <li><strong>Scroll Animations:</strong> Animates project cards on scroll</li>
+                        </ul>
+                    </section>
+
+                    <section id="contributing">
+                        <h2>Contributing</h2>
+                        <p>We welcome contributions to the CITeR Projects Page! Here's how you can contribute:</p>
+                        <ol>
+                            <li>Fork the repository</li>
+                            <li>Create a new branch for your feature</li>
+                            <li>Make your changes</li>
+                            <li>Test your changes locally</li>
+                            <li>Submit a pull request</li>
+                        </ol>
+
+                        <h3>Coding Guidelines</h3>
+                        <ul>
+                            <li>Write clean, readable HTML</li>
+                            <li>Follow CSS best practices</li>
+                            <li>Keep JavaScript minimal and efficient</li>
+                            <li>Ensure responsive design works on all devices</li>
+                            <li>Test in multiple browsers</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CITeR Research. All rights reserved.</p>
+            <p><a href="index.html">Documentation</a> | <a href="../index.html">Home</a></p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
