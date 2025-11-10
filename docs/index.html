@@ -226,7 +226,7 @@
 
           <thead>
             <tr>
-              <th class="has-text-centered">Project ID</th>
+              <th class="has-text-centered" onclick="sortTable(0)" >Project ID</th>
               <th class="has-text-centered">Project Title</th>
               <th class="has-text-centered">PI and Researchers</th>
               <th class="has-text-centered">Repository</th>
@@ -679,9 +679,6 @@
                 streamlined data management, and structured dataset generation.
               </td>
             </tr>
-
-
-
 
 
           </tbody>
@@ -1620,6 +1617,82 @@
       </div>
     </div>
   </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("table.table").forEach(table => {
+      const header = table.querySelector("thead th:first-child"); // Project ID column
+      if (!header) return;
+
+      // Initial reverse chronological sort on load
+      sortByProjectID(table, header, false);
+
+      // Enable manual toggle
+      header.style.cursor = "pointer";
+      header.title = "Click to sort by Project ID";
+      header.addEventListener("click", () => sortByProjectID(table, header));
+    });
+  });
+
+  function sortByProjectID(table, header, toggle = true) {
+    const tbody = table.tBodies[0];
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    let isAscending;
+
+    if (toggle) {
+      const currentOrder = header.dataset.order || "desc";
+      isAscending = currentOrder === "desc";
+    } else {
+      // Default to reverse chronological on load
+      isAscending = false;
+    }
+
+    rows.sort((a, b) => {
+      const idA = a.cells[0]?.innerText.trim().replace("#", "") || "";
+      const idB = b.cells[0]?.innerText.trim().replace("#", "") || "";
+
+      // Split by hyphen and take the first part (e.g., "24S" from "24S-04B")
+      const mainA = idA.split("-")[0].trim();
+      const mainB = idB.split("-")[0].trim();
+
+      // Extract year digits and season letter if available (e.g., "24S" → year=24, season="S")
+      const yearA = parseInt(mainA.replace(/\D/g, "")) || 0;
+      const yearB = parseInt(mainB.replace(/\D/g, "")) || 0;
+      const seasonA = mainA.replace(/[0-9]/g, "").toUpperCase();
+      const seasonB = mainB.replace(/[0-9]/g, "").toUpperCase();
+
+      // Define season order: S (Spring) < F (Fall) < W (Winter) < M (Misc)
+      const seasonOrder = { "S": 1, "F": 2, "W": 3, "M": 4 };
+      const sA = seasonOrder[seasonA] || 9;
+      const sB = seasonOrder[seasonB] || 9;
+
+      // Compare year first, then season
+      if (yearA !== yearB) {
+        return isAscending ? yearA - yearB : yearB - yearA;
+      } else if (sA !== sB) {
+        return isAscending ? sA - sB : sB - sA;
+      }
+
+      // If still equal, fallback to raw ID comparison
+      return isAscending ? idA.localeCompare(idB) : idB.localeCompare(idA);
+    });
+
+    // Reset arrows
+    table.querySelectorAll("th").forEach(th => {
+      th.textContent = th.textContent.replace(/[▲▼]/g, "").trim();
+    });
+
+    // Add new arrow
+    const arrow = isAscending ? " ▲" : " ▼";
+    header.textContent = header.textContent.trim() + arrow;
+    header.dataset.order = isAscending ? "asc" : "desc";
+
+    // Reattach sorted rows
+    rows.forEach(row => tbody.appendChild(row));
+  }
+</script>
+
+
 
 </body>
 
