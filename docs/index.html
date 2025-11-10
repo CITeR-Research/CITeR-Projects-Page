@@ -470,16 +470,16 @@
               </td>
               <td>
                 This GitHub repository provides a MATLAB-based pipeline for age-adaptive fingerprint scaling. A
-                regression script fits
-                polynomial models to Preciozzi’s published scale factors (ages 1, 2, 5–9 yrs) and adulthood, then
-                predicts missing
-                values for ages 3, 4, and 10–17 based on the best-fitting model. A rescaling function applies each
-                subject’s
-                age-specific scale factor via bicubic interpolation to normalize ridge spacing to an adult reference (~9
-                px @ 500 ppi).
-                Finally, a batch script reads enrollment ages from Excel, processes all images in a directory tree, and
-                outputs scaled
-                prints in a parallel folder structure—ensuring compatibility with commercial fingerprint matchers.
+                regression script fits polynomial models to Preciozzi’s published scale factors (ages 1, 2, 5–9 yrs) and
+                adulthood, then
+                predicts missing values for ages 3, 4, and 10–17 based on the best-fitting model. A rescaling function
+                applies each
+                subject’s age-specific scale factor via bicubic interpolation to normalize ridge spacing to an adult
+                reference (~9
+                px @ 500 ppi). Finally, a batch script reads enrollment ages from Excel, processes all images in a
+                directory tree, and
+                outputs scaled prints in a parallel folder structure—ensuring compatibility with commercial fingerprint
+                matchers.
               </td>
             </tr>
 
@@ -529,12 +529,10 @@
               </td>
               <td>
                 This repository contains code for training a model that produces a unified score to assess face image
-                quality,
-                integrating multiple quality factors into a single metric. The implementation aligns with the ISO/IEC
-                29794-5
-                specification for biometric image quality evaluation and supports extensibility for research and
-                benchmarking
-                across different datasets.
+                quality, integrating multiple quality factors into a single metric. The implementation aligns with the
+                ISO/IEC
+                29794-5 specification for biometric image quality evaluation and supports extensibility for research and
+                benchmarking across different datasets.
               </td>
             </tr>
 
@@ -563,7 +561,7 @@
             <!-- Add more project rows below -->
 
             <tr>
-              <td class="has-text-centered">21F-01M</td>
+              <td class="has-text-centered">#21F-01M</td>
               <td>diffDeMorph: Extending Reference-Free Demorphing to Unseen Faces</td>
               <td>
                 <ul style="margin:0; padding-left:1.2em; list-style:none;">
@@ -589,7 +587,7 @@
             </tr>
 
             <tr>
-              <td class="has-text-centered">21F-01M</td>
+              <td class="has-text-centered">#21F-01M</td>
               <td>Facial Demorphing from a Single Morph Using a Latent Conditional GAN</td>
               <td>
                 <ul style="margin:0; padding-left:1.2em; list-style:none;">
@@ -611,9 +609,79 @@
                 The method addresses morph replication and generalization issues by decomposing morphs in latent space,
                 enabling recovery of constituent faces created using unseen morphing techniques and real images.
                 Trained on synthetic morphs and tested on real data, it significantly outperforms existing methods in
-                <strong>visual fidelity and robustness</strong>. <br> <strong>IJCB-2025 IAPR Best Student Paper Award</strong>
+                <strong>visual fidelity and robustness</strong>. <br> <strong>IJCB-2025 IAPR Best Student Paper
+                  Award</strong>
               </td>
             </tr>
+
+            <tr>
+
+
+
+            <tr>
+              <td class="has-text-centered">#23F-01J-SP</td>
+              <td>TOWARDS THE CREATION OF A LARGE DATASET OF HIGH-QUALITY FACE MORPHS - PHASE III </td>
+              <td>
+                <ul style="margin:0; padding-left:1.2em; list-style:none;">
+                  <li style="white-space:nowrap;">Dr. Jeremy Dawson (WVU)</li>
+                  <li style="white-space:nowrap;">Dr. Nasser M. Nasrabadi (JHU)</li>
+                  <li style="white-space:nowrap;">Dr. Chen Liu (CU)</li>
+                  <li style="white-space:nowrap;">Dr. Stephanie Schuckers (CU)</li>
+                  <li style="white-space:nowrap;">Dr. David Doermann (UB)</li>
+                  <li style="white-space:nowrap;">Dr. Srirangaraj Setlur (UB)</li>
+                  <li style="white-space:nowrap;">Dr. Siwei Lyu (UB)</li>
+                  <li style="white-space:nowrap;">Email: <a href="mailto:chenliu@clarkson.edu">chenliu@clarkson.edu</a>
+                  </li>
+                </ul>
+              </td>
+              <td class="has-text-centered">
+                <a href="https://github.com/zblasingame/Greedy-DiM" target="_blank" rel="noopener">
+                  GitHub Code <br>
+                  (Public)
+                </a>
+              </td>
+              <td>
+                <!-- Description placeholder -->
+              </td>
+            </tr>
+
+            <tr>
+              <td class="has-text-centered">#22F-01C</td>
+              <td>Android App for Biometric Visible Light Iris Image Capture</td>
+              <td>
+                <ul style="margin:0; padding-left:1.2em; list-style:none;">
+                  <li style="white-space:nowrap;">Naveenkumar Venkataswamy (CU)</li>
+                  <li style="white-space:nowrap;">Yu Liu (CU)</li>
+                  <li style="white-space:nowrap;">Soumyabrata Dey (CU)</li>
+                  <li style="white-space:nowrap;">Dr. Masudul Haider Imtiaz (CU)</li>
+                  <li style="white-space:nowrap;">Email: <a href="mailto:mimtiaz@clarkson.edu">mimtiaz@clarkson.edu</a>
+                  </li>
+                </ul>
+              </td>
+              <td class="has-text-centered">
+                <a href="https://github.com/naveengv7/IrisQualityCapture" target="_blank" rel="noopener">
+                  GitHub Code <br>
+                  (Public)
+                </a>
+              </td>
+              <td>
+                This Android application enables biometric iris image capture in the visible light spectrum using
+                advanced on-device processing and quality control mechanisms. It integrates real-time
+                <strong>MediaPipe</strong> face mesh
+                detection for precise eye localization and leverages the <strong>Camera2</strong> API for accurate
+                autofocus and
+                region-of-interest targeting. Built-in <strong>OpenCV</strong> routines perform image quality analysis
+                to ensure
+                dataset-grade consistency, while compliance with <strong>ISO/IEC 29794-6</strong> standards guarantees
+                high-quality
+                iris captures. The app also supports flashlight control for uniform eye illumination, automated file
+                naming for
+                streamlined data management, and structured dataset generation.
+              </td>
+            </tr>
+
+
+
 
 
           </tbody>
